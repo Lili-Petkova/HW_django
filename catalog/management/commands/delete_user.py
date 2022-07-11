@@ -13,3 +13,5 @@ class Command(BaseCommand):
         user = User.objects.filter(id__in=options['id']).exclude(is_superuser=True).count()
         if user == len(options['id']):
             User.objects.filter(id__in=options['id']).delete()
+        else:
+            return "You can not delete the superuser."
