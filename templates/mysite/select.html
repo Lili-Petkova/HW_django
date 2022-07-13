@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My site</title>
+</head>
+<body>
+<h1>Select to change</h1>
+    <ul>
+        {% for obj in objects %}
+            <li><a href="{% url 'mysite:update_person' pk=obj.pk %}">{{ obj }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
