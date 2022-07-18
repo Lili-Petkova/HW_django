@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 
     'catalog',
     'mysite',
-
+    'shell_plus',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

@@ -9,6 +9,6 @@ class LogMiddleware:
         response = self.get_response(request)
         return response
 
-    def process_view(self, request, iew_func, view_args, view_kwargs):
+    def process_view(self, request, view_func, view_args, view_kwargs):
         if 'admin' not in request.path:
             Log.objects.create(path=request.path, method=request.method)
